@@ -1,0 +1,23 @@
+{
+	"name": "mini-devex",
+	"version": "1.0.0",
+	"description": "A minimal config for easy compilation to native web technologies.",
+	"main": "index.html",
+	"scripts": {
+		"watch:sync": "browser-sync start --server --files 'index.html', 'src/**/**'",
+		"watch:sass": "npx sass src/scss/style.scss:assets/css/style.min.css --style=compressed --watch",
+		"watch:rollup": "npx rollup -c --watch",
+		"start": "npm run watch:sass & npm run watch:rollup & npm run watch:sync",
+		"windows-start": "concurrently npm:watch:*"
+	},
+	"devDependencies": {
+		"browser-sync": "latest",
+		"concurrently": "latest",
+		"rollup": "latest",
+		"@rollup/plugin-node-resolve": "latest",
+		"sass": "latest"
+	},
+	"dependencies": {
+		"js-cookie": "latest"
+	}
+}
