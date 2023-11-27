@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "A minimal config for easy compilation to native web technologies.",
 	"main": "index.html",
+	"type": "module",
 	"scripts": {
 		"watch:sync": "browser-sync start --server --files 'index.html', 'src/**/**'",
 		"watch:sass": "npx sass src/scss/style.scss:assets/css/style.min.css --style=compressed --watch",
