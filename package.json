@@ -5,15 +5,15 @@
 	"main": "index.html",
 	"type": "module",
 	"scripts": {
-		"watch:sync": "browser-sync start --server --files 'index.html', 'src/**/**'",
+		"watch:sync": "npx @11ty/eleventy-dev-server",
 		"watch:sass": "npx sass src/scss/style.scss:assets/css/style.min.css --style=compressed --watch",
 		"watch:rollup": "npx rollup -c --watch",
-		"start": "npm run watch:sass & npm run watch:rollup & npm run watch:sync"
+		"dev": "npm run watch:sass & npm run watch:rollup & npm run watch:sync"
 	},
 	"devDependencies": {
-		"browser-sync": "latest",
-		"rollup": "latest",
+		"@11ty/eleventy-dev-server": "latest",
 		"@rollup/plugin-node-resolve": "latest",
+		"rollup": "latest",
 		"sass": "latest"
 	},
 	"dependencies": {
