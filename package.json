@@ -7,7 +7,7 @@
 	"scripts": {
 		"watch:sync": "npx @11ty/eleventy-dev-server",
 		"watch:sass": "npx sass src/scss/style.scss:assets/css/style.min.css --style=compressed --watch",
-		"watch:rollup": "npx rollup -c --watch",
+		"watch:rollup": "npx rollup -q -c --watch",
 		"dev": "npm run watch:sass & npm run watch:rollup & npm run watch:sync"
 	},
 	"devDependencies": {
