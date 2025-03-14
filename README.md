@@ -4,7 +4,7 @@ A miniature dev environment for building websites.
 
 - 11ty dev server for hot-reload on changes.
 - SASS for... well SASS.
-- Rollup for JS
+- esbuild for JS
 
 ## Installation
 
