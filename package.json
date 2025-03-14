@@ -8,12 +8,10 @@
 		"watch:sync": "browser-sync start --server --files 'index.html', 'src/**/**'",
 		"watch:sass": "npx sass src/scss/style.scss:assets/css/style.min.css --style=compressed --watch",
 		"watch:rollup": "npx rollup -c --watch",
-		"start": "npm run watch:sass & npm run watch:rollup & npm run watch:sync",
-		"windows-start": "concurrently npm:watch:*"
+		"start": "npm run watch:sass & npm run watch:rollup & npm run watch:sync"
 	},
 	"devDependencies": {
 		"browser-sync": "latest",
-		"concurrently": "latest",
 		"rollup": "latest",
 		"@rollup/plugin-node-resolve": "latest",
 		"sass": "latest"
